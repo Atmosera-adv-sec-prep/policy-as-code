@@ -1,0 +1,37 @@
+name: Default Policy
+
+codescanning:
+  level: error
+
+# Dependency Security Alters
+dependabot:
+  level: high
+
+# Dependency Licensing Alerts
+licensing:
+  conditions:
+    ids:
+      - GPL-*
+      - LGPL-*
+      - AGPL-*
+
+  warnings:
+    # Warning is the dependency isn't known
+    ids:
+      - Other
+      - NA
+      - None
+      - NOASSERTION
+
+# General Dependency Alerts
+# dependencies:
+  # conditions:
+  #   names:
+  #     - org.projectlombok:lombok
+  # warnings:
+  #   ids:
+  #     - Maintenance
+  #     - Organization
+
+secretscanning:
+  level: all
